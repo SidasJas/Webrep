@@ -41,7 +41,7 @@ include("functions.php");
     <div class="row">
         <div class="column">
             <h2>Shelly išmaniųjų namų sistema</h2>
-            <p>lorem ipsum lalalalalalla</p>
+            <p>Labadiena</p>
         </div>
     </div>
 
