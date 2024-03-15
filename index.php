@@ -31,7 +31,10 @@ include("functions.php");
         <li><a href="contact.php">Kontaktai</a></li>
         <li><a href="about.php">Apie mus</a></li>
         <li><a href="../Contact Us Form/index.php">Susisiekite su mumis</a></li>
-        <li><a href="signup.php">Prisijungimas</a></li>
+        <!-- registracijai reikalingi-->
+        <li><a href="logout.php">Atsijungti</a></li>
+        <!--registracijos dalykai-->
+
     </ul>
 
 </nav>
@@ -41,8 +44,6 @@ include("functions.php");
             <p>lorem ipsum lalalalalalla</p>
         </div>
     </div>
-<!-- registracijai reikalingi-->
-    <a href="logout.php">Atsijungti</a>
-<!--registracijos dalykai-->
+
 </body>
 </html>

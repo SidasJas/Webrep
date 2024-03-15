@@ -1,5 +1,13 @@
 <?php
 include 'head.php';
+//sitas eilutes copy paste visuose pages
+include("connection.php");
+include("functions.php");
+
+//registracijos dalykai. Tikrina ar LogedIn
+session_start();
+$user_data=check_login($con);
+//sitas eilutes copy paste visuose pages
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +32,8 @@ include 'head.php';
         <li><a href="contact.php">Kontaktai</a></li>
         <li><a href="about.php">Apie mus</a></li>
         <li><a href="../Contact Us Form/index.php">Susisiekite su mumis</a></li>
-        <li><a href="signup.php">Prisijungimas</a></li>
+        <li><a href="logout.php">Atsijungti</a></li>
+
     </ul>
 
 </nav>
@@ -39,3 +48,4 @@ include 'head.php';
     </div>
 </div>
 </body>
+</html>
