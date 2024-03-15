@@ -1,5 +1,12 @@
 <?php
 
+include("connection.php");
+include("functions.php");
+
+//registracijos dalykai. Tikrina ar LogedIn
+session_start();
+$user_data=check_login($con);
+
 if(isset($_POST['submit']))
 {
     $name = $_POST['name'];

@@ -36,10 +36,14 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
             }
         }
 
-        echo "wrong username or password!";
+        echo '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color:white; font-size:30px">';
+        echo "Wrong username or password!";
+        echo '</div>';
     }else
     {
-        echo "wrong username or password!";
+        echo '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color:white; font-size:30px">';
+        echo "Wrong username or password!";
+        echo '</div>';
     }
 }
 
@@ -185,8 +189,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         <a href="#">ShellyAPI</a>
     </div>
     <ul>
-        <li><a href="#">Pagrindinis</a></li>
-        <li><a href="#">Kontaktai</a></li>
         <li><a href="signup.php">Registruotis</a></li>
     </ul>
 
