@@ -24,10 +24,9 @@ $user_data=check_login($con);
     </div>
     <ul>
         <li><a href="../index.php">Pagrindinis</a></li>
-        <li><a href="contact.php">Kontaktai</a></li>
-        <li><a href="about.php">Apie mus</a></li>
+        <li><a href="../contact.php">Kontaktai</a></li>
+        <li><a href="../about.php">Apie mus</a></li>
         <li><a href="index.php">Susisiekite su mumis</a></li>
-        <li><a href="signup.php">Prisijungimas</a></li>
     </ul>
 
 </nav>
