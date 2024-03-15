@@ -1,12 +1,5 @@
 <?php
-include "head.php";
-include("connection.php");
-include("functions.php");
-
-//registracijos dalykai
-    session_start();
-    $user_data=check_login($con);
-
+include 'head.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,11 +9,12 @@ include("functions.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GASP</title>
     <style>
-       
+        /* CSS code goes here */
         <?php include "stylesheet.css"; ?>
     </style>
 </head>
-<body>
+    
+
 <nav class="navbar">
     <div class="logo">
         <a href="#">ShellyAPI</a>
@@ -34,14 +28,14 @@ include("functions.php");
     </ul>
 
 </nav>
-    <div class="row">
-        <div class="column">
-            <h2>Shelly išmaniųjų namų sistema</h2>
-            <p>lorem ipsum lalalalalalla</p>
-        </div>
+
+<div class="row">
+    <div class = "column">
+        <h2>Kontaktinė informacija</h2>
+        <p>Arnas Zdanevičius - arnzda@ktu.lt</p>
+        <p>Paulius Dzvankauskas - paudzv@ktu.lt</p>
+        <p>Sidas Jasulaitis - sidjas@ktu.lt</p>
+        <p>Gediminas Mikulėnas - gedmik@ktu.lt</p>
     </div>
-<!-- registracijai reikalingi-->
-    <a href="logout.php">Atsijungti</a>
-<!--registracijos dalykai-->
+</div>
 </body>
-</html>
