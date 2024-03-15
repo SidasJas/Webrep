@@ -44,7 +44,7 @@ $user_data=check_login($con);
         <p>Arnas Zdanevičius - arnzda@ktu.lt</p>
         <p>Paulius Dzvankauskas - paudzv@ktu.lt</p>
         <p>Sidas Jasulaitis - sidjas@ktu.lt</p>
-        <p>Gediminas Mikulėnas - gedmik@ktu.lt</p>
+        <p>Gediminas Mikulėnas - gedmik4@ktu.lt</p>
     </div>
 </div>
 </body>
