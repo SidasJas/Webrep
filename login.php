@@ -5,45 +5,35 @@ session_start();
 include("connection.php");
 include("functions.php");
 
-
-if($_SERVER['REQUEST_METHOD'] == "POST")
-{
-    //something was posted
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    // Something was posted
     $user_name = $_POST['user_name'];
     $password = $_POST['password'];
 
-    if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
-    {
-
-        //read from database
-        $query = "select * from users where user_name = '$user_name' limit 1";
+    if (!empty($user_name) && !empty($password) && !is_numeric($user_name)) {
+        // Read from database
+        $query = "SELECT * FROM users WHERE user_name = '$user_name' LIMIT 1";
         $result = mysqli_query($con, $query);
 
-        if($result)
-        {
-            if($result && mysqli_num_rows($result) > 0)
-            {
+        if ($result && mysqli_num_rows($result) > 0) {
+            $user_data = mysqli_fetch_assoc($result);
 
-                $user_data = mysqli_fetch_assoc($result);
-
-                if($user_data['password'] === $password)
-                {
-
-                    $_SESSION['user_id'] = $user_data['user_id'];
-                    header("Location: index.php");
-                    die;
-                }
+            if ($user_data['password'] === $password) {
+                $_SESSION['user_id'] = $user_data['user_id'];
+                header("Location: index.php");
+                die;
+            } else {
+                // Wrong password
+                echo '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color:white; font-size:30px">';
+                echo "Wrong password!";
+                echo '</div>';
             }
+        } else {
+            // User doesn't exist
+            echo '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color:white; font-size:30px">';
+            echo "Vartotojas neegzistuoja!";
+            echo '</div>';
         }
-
-        echo '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color:white; font-size:30px">';
-        echo "Wrong username or password!";
-        echo '</div>';
-    }else
-    {
-        echo '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color:white; font-size:30px">';
-        echo "Wrong username or password!";
-        echo '</div>';
     }
 }
 

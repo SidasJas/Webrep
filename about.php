@@ -32,7 +32,7 @@ $user_data=check_login($con);
         <li><a href="index.php">Pagrindinis</a></li>
         <li><a href="contact.php">Kontaktai</a></li>
         <li><a href="about.php">Apie mus</a></li>
-        <li><a href="../Contact Us Form/index.php">Susisiekite su mumis</a></li>
+        <li><a href="Contact Us Form/index.php">Susisiekite su mumis</a></li>
         <!-- registracijai reikalingi-->
         <li><a href="logout.php">Atsijungti</a></li>
         <!--registracijos dalykai-->

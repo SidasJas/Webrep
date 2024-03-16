@@ -1,30 +1,36 @@
 <?php
 session_start();
-    include("connection.php");
-    include("functions.php");
+include("connection.php");
+include("functions.php");
 
-    if($_SERVER['REQUEST_METHOD'] == "POST")
-    {
-        //sth was posted
-        $user_name=$_POST['user_name'];
-        $password=$_POST['password'];
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    // Something was posted
+    $user_name = $_POST['user_name'];
+    $password = $_POST['password'];
 
-        if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
-        {
-          //save to DB
-            $user_id=random_num(20);
-            $query = "insert into users (user_id,user_name,password) values('$user_id','$user_name','$password')";
+    // Check if the username is already taken
+    $check_query = "SELECT * FROM users WHERE user_name = '$user_name'";
+    $check_result = mysqli_query($con, $check_query);
 
-            mysqli_query($con, $query);
+    if (mysqli_num_rows($check_result) > 0) {
+        // Username is already taken
+        echo '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color:white; font-size:30px">';
+        echo "Vartotojo vardas užimtas, pasirinkite kitą!";
+        echo '</div>';
+    } elseif (!empty($user_name) && !empty($password) && !is_numeric($user_name)) {
+        // Username is available, save to DB
+        $user_id = random_num(20);
+        $query = "INSERT INTO users (user_id,user_name,password) VALUES ('$user_id','$user_name','$password')";
 
-            header("Location: login.php");
-            die;
-        }else
-        {
-            echo "Please enter valid information";
-        }
+        mysqli_query($con, $query);
 
+        header("Location: login.php");
+        die;
+    } else {
+        // Invalid input
+        echo "Please enter valid information.";
     }
+}
 ?>
 
 <!DOCTYPE html>
