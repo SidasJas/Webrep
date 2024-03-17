@@ -177,8 +177,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <a href="#">ShellyAPI</a>
     </div>
     <ul>
-        <li><a href="#">Pagrindinis</a></li>
-        <li><a href="#">Kontaktai</a></li>
         <li><a href="login.php">Prisijungti</a></li>
     </ul>
 

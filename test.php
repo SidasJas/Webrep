@@ -1,12 +1,13 @@
 <?php
+
 include "head.php";
 //sitas eilutes copy paste visuose pages
 include("connection.php");
 include("functions.php");
 
 //registracijos dalykai. Tikrina ar LogedIn
-    session_start();
-    $user_data=check_login($con);
+session_start();
+$user_data = check_login($con);
 //sitas eilutes copy paste visuose pages
 ?>
 
@@ -36,12 +37,12 @@ include("functions.php");
     </ul>
 
 </nav>
-<div class="row">
-    <div class="column">
-        <h2>Shelly išmaniųjų namų sistema</h2>
-        <p>Labadiena</p>
+    <div class="row">
+        <div class="column">
+            <h2>Shelly išmaniųjų namų sistema</h2>
+            <p>Labadiena</p>
+        </div>
     </div>
-</div>
 
 </body>
 </html>
