@@ -7,6 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     // Something was posted
     $user_name = $_POST['user_name'];
     $password = $_POST['password'];
+    
 
     // Check if the username is already taken
     $check_query = "SELECT * FROM users WHERE user_name = '$user_name'";
@@ -20,13 +21,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     } elseif (!empty($user_name) && !empty($password) && !is_numeric($user_name)) {
         // Username is available, save to DB
         $user_id = random_num(20);
-        $query = "INSERT INTO users (user_id,user_name,password) VALUES ('$user_id','$user_name','$password')";
-
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT); // Hash the password
+    
+        $query = "INSERT INTO users (user_id, user_name, password) VALUES ('$user_id', '$user_name', '$hashed_password')";
+    
         mysqli_query($con, $query);
-
+    
         header("Location: login.php");
         die;
-    } else {
+    }else {
         // Invalid input
         echo "Please enter valid information.";
     }

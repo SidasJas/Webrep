@@ -8,8 +8,8 @@ include("functions.php");
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     // Something was posted
     $user_name = $_POST['user_name'];
-    $password = $_POST['password'];
-
+    $password = $_POST['password']; 
+    
     if (!empty($user_name) && !empty($password) && !is_numeric($user_name)) {
         // Read from database
         $query = "SELECT * FROM users WHERE user_name = '$user_name' LIMIT 1";
@@ -18,14 +18,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         if ($result && mysqli_num_rows($result) > 0) {
             $user_data = mysqli_fetch_assoc($result);
 
-            if ($user_data['password'] === $password) {
+            // Verify the password
+            if (password_verify($password, $user_data['password'])) {
                 $_SESSION['user_id'] = $user_data['user_id'];
                 header("Location: index.php");
                 die;
             } else {
                 // Wrong password
                 echo '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color:white; font-size:30px">';
-                echo "Wrong password!";
+                echo "Neteisingas salptazodis!";
                 echo '</div>';
             }
         } else {
