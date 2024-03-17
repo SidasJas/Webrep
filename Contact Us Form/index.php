@@ -17,7 +17,7 @@
         <a href="#">ShellyAPI</a>
     </div>
     <ul>
-        <li><a href="../index.php">Pagrindinis</a></li>
+        <li><a href="../index.html">Pagrindinis</a></li>
         <li><a href="../contact.php">Kontaktai</a></li>
         <li><a href="../about.php">Apie mus</a></li>
         <li><a href="index.php">Susisiekite su mumis</a></li>
