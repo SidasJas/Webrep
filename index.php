@@ -37,9 +37,8 @@ include("functions.php");
 
 </nav>
 <div class="row">
-    <div class="column">
-        <h2>Shelly išmaniųjų namų sistema</h2>
-        <p>Labadiena</p>
+    <div class="main">
+        <main>Shelly išmaniųjų namų sistema</main>
     </div>
 </div>
 
