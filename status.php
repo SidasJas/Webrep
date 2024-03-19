@@ -30,6 +30,12 @@ $user_data = check_login($con);
         .hidden {
     display: none;
 }
+        .image {
+            background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+        }
 
 
     </style>
@@ -73,8 +79,8 @@ $user_data = check_login($con);
 </div>
 <div class="row">
     <div class="column light-container">
-        <img id="lightOn" class="light hidden" src="images\lightbublon.png" alt="Light is turned ON">
-        <img id="lightOff" class="light" src="images\lightbublof.png" alt="Light is turned OFF">
+        <img id="lightOn" class="light hidden" class = "image" src="images\lightbublon.png" alt="Light is turned ON">
+        <img id="lightOff" class="light" class = "image" src="images\lightbublof.png" alt="Light is turned OFF">
     </div>
 </div>
 
