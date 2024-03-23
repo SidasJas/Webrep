@@ -84,6 +84,7 @@ $user_data = check_login($con);
     </div>
 </div>
 
+<!--JScript-->
 <script>
 function toggleDeviceStatus() {
     var lightOn = document.getElementById('lightOn');
