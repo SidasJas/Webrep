@@ -19,6 +19,7 @@
     <ul>
         <li><a href="../index.php">Pagrindinis</a></li>
         <li><a href="../contact.php">Kontaktai</a></li>
+        <li><a href="status.php">Status</a></li>
         <li><a href="../about.php">Apie mus</a></li>
         <li><a href="index.php">Susisiekite su mumis</a></li>
         <li><a href="profile.php">Profilis</a></li>
