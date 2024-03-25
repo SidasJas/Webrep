@@ -43,14 +43,14 @@ $user_data=check_login($con);
 
 <div class="row">
     <div class = "column">
-        <h2>Kaip tai veikia</h2>
-      <p>kazka cia hihihiha</p>
+        <h2>text goes here</h2>
+      <p>text goes here</p>
     </div>
 </div>
 <div class="row">
     <div class = "column">
-        <h2>Dar kazkas</h2>
-      <p>ratatatta</p>
+        <h2>text goes here</h2>
+      <p>text goes here</p>
     </div>
 </div>
 </body>
